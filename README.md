@@ -4,21 +4,7 @@ Sistema web (HTML, CSS e JavaScript puro, sem necessidade de instalar nada)
 para controle completo de estoque de camisas de time: cadastro, movimentações,
 histórico, financeiro e relatórios.
 
-## Como usar
 
-1. Extraia a pasta `kadu-sistema` em qualquer lugar do seu computador.
-2. Abra o arquivo **index.html** no navegador (duplo clique).
-3. Faça login (qualquer e-mail e senha entram — é um login de demonstração,
-   sem servidor por trás).
-4. Use o menu lateral para navegar entre as seções.
-
-> Os dados ficam salvos no armazenamento local do navegador (localStorage).
-> Continuam lá mesmo se você fechar e abrir de novo, mas ficam só nesse
-> navegador/computador — não são compartilhados entre dispositivos.
-
-## Estrutura de pastas
-
-```
 kadu-sistema/
 ├── index.html              → Tela de login
 ├── dashboard.html           → Dashboard com 8 indicadores e gráficos
@@ -77,16 +63,4 @@ confirmação antes de excluir, atalhos de teclado (`/` para buscar, `N` para
 nova camisa, `Esc` para fechar modais) e layout responsivo para desktop,
 notebook e tablet.
 
-## Observações técnicas
 
-- Não há back-end: tudo roda no navegador. Para dados compartilhados entre
-  várias pessoas/dispositivos e login realmente seguro, seria necessário um
-  servidor com banco de dados — próximo passo natural se isso virar um sistema
-  usado por mais gente além do Kadu.
-- Bibliotecas usadas via CDN: [Chart.js](https://www.chartjs.org/) (gráficos),
-  [jsPDF](https://github.com/parallax/jsPDF) + autoTable (relatórios em PDF) e
-  [SheetJS/xlsx](https://sheetjs.com/) (relatórios em Excel).
-- Fontes: Anton (títulos), Inter (textos) e JetBrains Mono (dados/etiquetas).
-- Fotos de produtos são salvas como imagem embutida (base64) no navegador —
-  em grande volume, isso pode deixar o localStorage pesado; se o catálogo
-  crescer muito, vale migrar para um servidor com armazenamento de arquivos.
