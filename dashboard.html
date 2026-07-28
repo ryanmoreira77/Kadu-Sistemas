@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kadu Camisas de Time — Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+</head>
+<body>
+
+<div class="app-shell">
+  <div id="sidebar-root"></div>
+  <div class="main">
+    <div id="header-root"></div>
+
+    <div class="page-content">
+      <section class="kpi-grid" id="kpiGrid"></section>
+
+      <div class="charts-row">
+        <div class="panel anim-fade-up">
+          <h3>Estoque por categoria</h3>
+          <p class="sub">Quantidade de camisas</p>
+          <div class="chart-box"><canvas id="chartCategoria"></canvas></div>
+        </div>
+        <div class="panel anim-fade-up">
+          <h3>Distribuição por tamanho</h3>
+          <p class="sub">% do estoque atual</p>
+          <div class="chart-box"><canvas id="chartTamanho"></canvas></div>
+        </div>
+      </div>
+
+      <div class="charts-row">
+        <div class="panel anim-fade-up">
+          <h3>🔥 Camisas mais vendidas</h3>
+          <p class="sub">Total de unidades vendidas (histórico)</p>
+          <div class="rank-list" id="rankMaisVendidas"></div>
+        </div>
+        <div class="panel anim-fade-up">
+          <h3>⚠ Estoque baixo</h3>
+          <p class="sub" id="lowStockSub">Quantidade igual ou menor que 5 unidades</p>
+          <table class="simple" id="lowStockTable"></table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/brand.js"></script>
+<script src="assets/js/shell.js"></script>
+<script src="assets/js/dashboard.js"></script>
+</body>
+</html>

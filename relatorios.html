@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kadu Camisas de Time — Relatórios</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+
+<div class="app-shell">
+  <div id="sidebar-root"></div>
+  <div class="main">
+    <div id="header-root"></div>
+
+    <div class="page-content">
+      <div class="report-grid">
+
+        <div class="report-card anim-fade-up">
+          <h3>📦 Relatório de Estoque</h3>
+          <p>Time, categoria, tamanho, código e quantidade atual de cada camisa.</p>
+          <div class="report-formats">
+            <button onclick="baixarRelatorio('estoque','pdf')">PDF</button>
+            <button onclick="baixarRelatorio('estoque','xlsx')">Excel</button>
+            <button onclick="baixarRelatorio('estoque','csv')">CSV</button>
+          </div>
+        </div>
+
+        <div class="report-card anim-fade-up" style="animation-delay:.05s">
+          <h3>👕 Relatório de Produtos</h3>
+          <p>Cadastro completo: liga, temporada, marca, modelo e preços.</p>
+          <div class="report-formats">
+            <button onclick="baixarRelatorio('produtos','pdf')">PDF</button>
+            <button onclick="baixarRelatorio('produtos','xlsx')">Excel</button>
+            <button onclick="baixarRelatorio('produtos','csv')">CSV</button>
+          </div>
+        </div>
+
+        <div class="report-card anim-fade-up" style="animation-delay:.1s">
+          <h3>📈 Relatório de Lucro</h3>
+          <p>Lucro unitário e potencial por produto, considerando o estoque atual.</p>
+          <div class="report-formats">
+            <button onclick="baixarRelatorio('lucro','pdf')">PDF</button>
+            <button onclick="baixarRelatorio('lucro','xlsx')">Excel</button>
+            <button onclick="baixarRelatorio('lucro','csv')">CSV</button>
+          </div>
+        </div>
+
+        <div class="report-card anim-fade-up" style="animation-delay:.15s">
+          <h3>🛒 Relatório de Vendas</h3>
+          <p>Todas as vendas registradas na tela de Estoque, com data e valor.</p>
+          <div class="report-formats">
+            <button onclick="baixarRelatorio('vendas','pdf')">PDF</button>
+            <button onclick="baixarRelatorio('vendas','xlsx')">Excel</button>
+            <button onclick="baixarRelatorio('vendas','csv')">CSV</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/brand.js"></script>
+<script src="assets/js/shell.js"></script>
+<script src="assets/js/relatorios.js"></script>
+</body>
+</html>
