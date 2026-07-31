@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kadu Camisas de Time — Configurações</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="app-shell">
+  <div id="sidebar-root"></div>
+  <div class="main">
+    <div id="header-root"></div>
+
+    <div class="page-content">
+      <div class="settings-grid">
+
+        <div class="panel anim-fade-up">
+          <h3>Identidade visual</h3>
+          <p class="sub">Logo e nome que aparecem em todo o sistema</p>
+
+          <div class="settings-logo-preview" id="logoPreview"></div>
+          <div id="logoUploadArea" style="margin-bottom:18px;"></div>
+
+          <div class="field" style="margin-bottom:16px;">
+            <label for="cfgNome">Nome da empresa</label>
+            <input id="cfgNome" type="text" placeholder="Kadu Camisas de Time">
+          </div>
+
+          <div class="field">
+            <label>Cor de destaque</label>
+            <div class="color-swatches" id="colorSwatches"></div>
+          </div>
+        </div>
+
+        <div class="panel anim-fade-up" style="animation-delay:.06s">
+          <h3>Dados da loja</h3>
+          <p class="sub">Informações usadas em relatórios e no rodapé do sistema</p>
+
+          <div class="field" style="margin-bottom:16px;">
+            <label for="cfgTelefone">Telefone / WhatsApp</label>
+            <input id="cfgTelefone" type="text" placeholder="(12) 90000-0000">
+          </div>
+          <div class="field" style="margin-bottom:16px;">
+            <label for="cfgEndereco">Endereço</label>
+            <input id="cfgEndereco" type="text" placeholder="Rua Exemplo, 123 — São José dos Campos/SP">
+          </div>
+          <div class="field">
+            <label for="cfgInstagram">Instagram</label>
+            <input id="cfgInstagram" type="text" placeholder="@kaducamisasdetime">
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:10px;margin-top:20px;">
+        <button class="btn-primary" onclick="salvarConfiguracoes()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>
+          Salvar configurações
+        </button>
+        <button class="btn-secondary" onclick="restaurarPadrao()">Restaurar padrão</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/brand.js"></script>
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+<script src="assets/js/supabaseClient.js"></script>
+<script src="assets/js/auth-cloud.js"></script>
+<script src="assets/js/shell.js"></script>
+<script src="assets/js/configuracoes.js"></script>
+</body>
+</html>
